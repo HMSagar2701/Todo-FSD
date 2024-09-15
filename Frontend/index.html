@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do Application</h1>
+
+        <div class="auth-section">
+            <h2>Login</h2>
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <button onclick="signup()">Sign Up</button>
+        </div>
+
+        <div class="todo-section" style="display:none;">
+            <button onclick="logout()">Logout</button>
+            <h2>Your To-Dos</h2>
+            <input type="text" id="search-todo" placeholder="Search To-Dos" onkeyup="searchTodos()">
+
+            <div id="todo-list">
+                <!-- To-Do items will be injected here -->
+            </div>
+
+            <div class="add-todo">
+                <input type="text" id="new-todo-title" placeholder="New To-Do Title">
+                <input type="date" id="new-todo-dueDate">
+                <button onclick="addTodo()">Add To-Do</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
